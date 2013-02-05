@@ -1,0 +1,1470 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"video",
+				"videos-list"
+			],
+			[
+				"Video",
+				"VideoList"
+			],
+			[
+				"add",
+				"addOne"
+			],
+			[
+				"url",
+				"urlParam"
+			],
+			[
+				"pa",
+				"paginator_ui"
+			],
+			[
+				"t",
+				"this"
+			],
+			[
+				"ge",
+				"genericFields"
+			],
+			[
+				"tota",
+				"totalRecords"
+			],
+			[
+				"to",
+				"totalPages"
+			],
+			[
+				"tot",
+				"totalRecords"
+			],
+			[
+				"upd",
+				"updateHistory"
+			],
+			[
+				"ho",
+				"historyTab"
+			],
+			[
+				"his",
+				"historyTab"
+			],
+			[
+				"curre",
+				"currentURL"
+			],
+			[
+				"curr",
+				"currentView"
+			],
+			[
+				"HA",
+				"hashCounter"
+			],
+			[
+				"ha",
+				"hashCounter"
+			],
+			[
+				"histo",
+				"historyTab"
+			],
+			[
+				"tr",
+				"true"
+			],
+			[
+				"api",
+				"apiURL"
+			],
+			[
+				"is",
+				"isRestricted"
+			],
+			[
+				"co",
+				"console"
+			],
+			[
+				"re",
+				"req"
+			],
+			[
+				"ar",
+				"article-wrapper"
+			],
+			[
+				"h",
+				"history"
+			],
+			[
+				"margin",
+				"margin-bottom"
+			],
+			[
+				"im",
+				"img"
+			],
+			[
+				"item",
+				"itemSelected"
+			],
+			[
+				"jq",
+				"jqueryselect"
+			],
+			[
+				"ur",
+				"url"
+			],
+			[
+				"hi",
+				"historyTab"
+			],
+			[
+				"cu",
+				"currentView"
+			],
+			[
+				"current",
+				"currentView"
+			],
+			[
+				"pag",
+				"pagerBtn"
+			],
+			[
+				"cur",
+				"currentView"
+			],
+			[
+				"art",
+				"articleListView"
+			],
+			[
+				"arti",
+				"articleListView"
+			],
+			[
+				"page",
+				"page"
+			],
+			[
+				"con",
+				"ConfigManager"
+			],
+			[
+				"act",
+				"Actualités"
+			],
+			[
+				"op",
+				"openClose"
+			],
+			[
+				"btn",
+				"btn-menu"
+			],
+			[
+				"ve",
+				"verticalMenu"
+			],
+			[
+				"ver",
+				"verticalMenu"
+			],
+			[
+				"marg",
+				"margin-top"
+			],
+			[
+				"te",
+				"text-align"
+			],
+			[
+				"menu",
+				"menu-item"
+			],
+			[
+				"i",
+				"important"
+			],
+			[
+				"mar",
+				"margin"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"foo",
+				"footer-widget"
+			],
+			[
+				"de",
+				"DEVICE"
+			],
+			[
+				"dev",
+				"deviceDetection"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"bac",
+				"background-color"
+			],
+			[
+				"begi",
+				"beginDate"
+			],
+			[
+				"get",
+				"getTime"
+			],
+			[
+				"end",
+				"endDate"
+			],
+			[
+				"b",
+				"beginDate"
+			],
+			[
+				"fon",
+				"font-size"
+			],
+			[
+				"ca",
+				"calendar"
+			],
+			[
+				"dat",
+				"dateCollection"
+			],
+			[
+				"school",
+				"schoolType"
+			],
+			[
+				"vi",
+				"visit"
+			],
+			[
+				"st",
+				"string"
+			],
+			[
+				"scho",
+				"schoolType"
+			],
+			[
+				"schoo",
+				"schoolAdress"
+			],
+			[
+				"sch",
+				"schoolAdress"
+			],
+			[
+				"va",
+				"value"
+			],
+			[
+				"for",
+				"formValidated"
+			],
+			[
+				"form",
+				"formView"
+			],
+			[
+				"rec",
+				"Record"
+			],
+			[
+				"inli",
+				"inline-block"
+			],
+			[
+				"a",
+				"articleListView"
+			],
+			[
+				"Article",
+				"ArticleView"
+			],
+			[
+				"ap",
+				"apiURL"
+			],
+			[
+				"list",
+				"listView"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"param",
+				"params"
+			],
+			[
+				"lo",
+				"log"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "public/js/collections/videos.js",
+			"settings":
+			{
+				"buffer_size": 1380,
+				"line_ending": "Windows",
+				"name": "define(["
+			}
+		},
+		{
+			"file": "public/js/views/AppView.js",
+			"settings":
+			{
+				"buffer_size": 492,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "public/js/views/list/VideoList.js",
+			"settings":
+			{
+				"buffer_size": 655,
+				"line_ending": "Windows",
+				"name": "define(["
+			}
+		},
+		{
+			"contents": "define([\n    'jquery',\n    'underscore',\n    'backbone',\n    'text!templates/VideoItemTemplate.html'\n\n    ], function ($, _, Backbone, VideoItemTemplate) {\n\n    return Backbone.View.extend({\n        \n        initialize:function(options) {\n          \n          _.bindAll(this, 'render'); \n          this.model.on('change', this.render);\n        },\n\n        template:_.template(VideoItemTemplate),\n\n        render:function(){\n        	this.$el.html(this.template(this.model.toJSON()));\n        	return this;\n        }\n\n    });\n\n});",
+			"file": "public/js/views/itemRenderer/VideoItem.js",
+			"file_size": 554,
+			"file_write_time": 130045309258518427,
+			"settings":
+			{
+				"buffer_size": 529,
+				"line_ending": "Windows",
+				"name": "define(["
+			}
+		},
+		{
+			"file": "public/js/templates/VideoItemTemplate.html",
+			"settings":
+			{
+				"buffer_size": 19,
+				"line_ending": "Windows",
+				"name": "<p><%= title %></p>"
+			}
+		},
+		{
+			"file": "public/index.html",
+			"settings":
+			{
+				"buffer_size": 633,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "public/css/style.css",
+			"settings":
+			{
+				"buffer_size": 228,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/Users/leb/Desktop/themeforest-3708895-nevia-responsive-html5-template/HTML/css/style.css",
+			"settings":
+			{
+				"buffer_size": 76472,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 173.0,
+		"selected_items":
+		[
+			[
+				"add",
+				"Git: Add..."
+			],
+			[
+				"sta",
+				"Git: Status"
+			],
+			[
+				"stat",
+				"Git: Status"
+			],
+			[
+				"status",
+				"Git: Status"
+			],
+			[
+				"stau",
+				"Git: Status"
+			],
+			[
+				"git add",
+				"Git: Add..."
+			],
+			[
+				"git sta",
+				"Git: Status"
+			],
+			[
+				"statu",
+				"Git: Status"
+			],
+			[
+				"git",
+				"Git: Status"
+			],
+			[
+				"commit",
+				"Git: Commit"
+			],
+			[
+				"git com",
+				"Git: Commit"
+			],
+			[
+				"log",
+				"Git: Log All"
+			],
+			[
+				"git pu",
+				"Git: Push Current Branch"
+			],
+			[
+				"git:comm",
+				"Git: Commit"
+			],
+			[
+				"git:add",
+				"Git: Add..."
+			],
+			[
+				"git:stat",
+				"Git: Status"
+			],
+			[
+				"git:log",
+				"Git: Log Current File"
+			],
+			[
+				"git:",
+				"Git: Status"
+			],
+			[
+				"git:lo",
+				"Git: Log Current File"
+			],
+			[
+				"git lo",
+				"Git: Log All"
+			],
+			[
+				"",
+				"Git: Commit"
+			],
+			[
+				"git ",
+				"Git: Status"
+			],
+			[
+				"packa",
+				"Package Control: Install Package"
+			],
+			[
+				"package",
+				"Package Control: Remove Package"
+			],
+			[
+				"pac",
+				"Package Control: Install Package"
+			],
+			[
+				"pa",
+				"Package Control: Install Package"
+			],
+			[
+				"snippet",
+				"Snippet: Backbone.Model"
+			]
+		],
+		"width": 400.0
+	},
+	"console":
+	{
+		"height": 291.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/Users/leb/Desktop/themeforest-3708895-nevia-responsive-html5-template/HTML/scripts/custom.js",
+		"/C/Users/leb/Desktop/Daily Motion sample app/public/js/app.js",
+		"/C/Users/leb/Desktop/Daily Motion sample app/public/js/main.js",
+		"/C/Users/leb/AppData/Roaming/Sublime Text 2/Packages/User/bbcollection.sublime-snippet",
+		"/C/Users/leb/AppData/Roaming/Sublime Text 2/Packages/User/bbpaginator.sublime-snippet",
+		"/C/Users/leb/mobile-fnsea/public/js/collections/articles.js",
+		"/C/Users/leb/Desktop/Sublime Snippets/bbpaginator.sublime-snippet",
+		"/C/Users/leb/Desktop/Daily Motion sample app/public/index.html",
+		"/C/Users/leb/Desktop/Daily Motion sample app/public/js/views/AppView.js",
+		"/C/Users/leb/Desktop/Daily Motion sample app/server.js",
+		"/C/Users/leb/Desktop/Starter project/server.js",
+		"/C/Users/leb/FO_2013/server.js",
+		"/C/Users/leb/mobile-fnsea/server.js",
+		"/C/Users/leb/Desktop/Daily Motion sample app/public/js/collections/videos.js",
+		"/C/Users/leb/Desktop/Starter project/package.json",
+		"/C/Users/leb/Desktop/DM Project/public/js/main.js",
+		"/C/Users/leb/Desktop/DM Project/dm_project.sublime-project",
+		"/C/Users/leb/Desktop/DM Project/README",
+		"/C/Users/leb/Desktop/DM Project/public/js/app.js",
+		"/C/Users/leb/Desktop/DM Project/public/js/router.js",
+		"/C/Users/leb/Desktop/DM Project/public/component.json",
+		"/C/Users/leb/Desktop/DM Project/grunt.js",
+		"/C/Users/leb/Desktop/DM Project/package.json",
+		"/C/Users/leb/Desktop/DM Project/server.js",
+		"/C/Users/leb/Desktop/DM Project/public/js/libs/jquery/component.json",
+		"/C/Users/leb/Desktop/DM Project/.gitignore",
+		"/C/Users/leb/Desktop/DM Project/public/js/libs/backbone/index.js",
+		"/C/Users/leb/Desktop/DM Project/public/config.bowerrc",
+		"/C/Users/leb/Desktop/DM Project/component.json",
+		"/C/Users/leb/Desktop/DM Project/config.bowerrc",
+		"/C/Users/leb/Desktop/DM Project/public/index.html",
+		"/C/Users/leb/mobile-fnsea/public/js/views/AppView.js",
+		"/C/Users/leb/mobile-fnsea/public/js/templates/ArticleItemTemplate.html",
+		"/C/Users/leb/mobile-fnsea/routes/fnsea.js",
+		"/C/Users/leb/mobile-fnsea/public/js/views/comps/PagerButton.js",
+		"/C/Users/leb/mobile-fnsea/public/js/templates/PagerTemplate.html",
+		"/C/Users/leb/mobile-fnsea/public/js/views/renderer/ArticleItemRenderer.js",
+		"//192.168.2.138/e$/Inetpub/ExtranetRefonte/Web.config",
+		"//192.168.2.138/e$/Inetpub/ExtranetRefonte/HostRewriting.config",
+		"//192.168.2.138/e$/Inetpub/ExtranetRefonte/default.aspx",
+		"//192.168.2.138/e$/Inetpub/ExtranetRefonte/sites/fnplegumes/controls/AdvanceSearch.ascx",
+		"//192.168.2.138/e$/Inetpub/ExtranetRefonte/sites/d29/controls/AdvanceSearch.ascx",
+		"//192.168.2.138/e$/Inetpub/ExtranetRefonte/sites/d55/controls/AdvanceSearch.ascx",
+		"//192.168.2.138/e$/Inetpub/ExtranetRefonte/sites/asi/controls/AdvanceSearch.ascx",
+		"//192.168.2.138/e$/Inetpub/ExtranetRefonte/sites/d28/controls/AdvanceSearch.ascx",
+		"/C/Users/leb/mobile-fnsea/database/121312_presses.json",
+		"//192.168.2.138/e$/Inetpub/ExtranetRefonte/sites/ase/controls/AdvanceSearch.ascx",
+		"//192.168.2.138/e$/Inetpub/ExtranetRefonte/sites/ase/controls/AdvanceSearch.ascx.cs",
+		"//192.168.2.138/e$/Inetpub/ExtranetRefonte/sites/animvin/controls/AdvanceSearch.ascx.cs",
+		"//192.168.2.138/e$/Inetpub/ExtranetRefonte/sites/agrieuroinfo/controls/AdvanceSearch.ascx.cs",
+		"//192.168.2.138/e$/Inetpub/ExtranetRefonte/sites/agri_info/controls/AdvanceSearch.ascx.cs",
+		"//192.168.2.138/e$/Inetpub/ExtranetRefonte/sites/actuagri/controls/AdvanceSearch.ascx.cs",
+		"//192.168.2.138/e$/Inetpub/ExtranetRefonte/sites/fnsea/controls/AdvanceSearch.ascx.cs",
+		"//192.168.2.138/e$/Inetpub/ExtranetRefonte/sites/fnsea/controls/AdvanceSearch.ascx",
+		"/C/Users/leb/mobile-fnsea/public/js/router.js",
+		"/C/Users/leb/mobile-fnsea/public/index.html",
+		"/C/Users/leb/mobile-fnsea/public/css/photoswipe.css",
+		"/C/Users/leb/mobile-fnsea/public/css/style.css",
+		"/C/Users/leb/mobile-fnsea/public/js/views/renderer/VideoItemRenderer.js",
+		"/C/Users/leb/mobile-fnsea/public/js/collections/videos.js",
+		"/C/Users/leb/mobile-fnsea/public/js/templates/VideoListItemTemplate.html",
+		"/C/Users/leb/mobile-fnsea/public/js/templates/AlbumListItemTemplate.html",
+		"/C/Users/leb/mobile-fnsea/public/js/utils/ConfigManager.js",
+		"/C/Users/leb/mobile-fnsea/public/js/templates/PhotoListTemplate.html",
+		"/C/Users/leb/mobile-fnsea/public/js/views/PhotoListView.js",
+		"/C/Users/leb/mobile-fnsea/public/js/layout/script.js",
+		"/C/Users/leb/mobile-fnsea/public/css/addon.css",
+		"/C/Users/leb/mobile-fnsea/public/js/views/renderer/AlbumItemRenderer.js",
+		"/C/Users/leb/mobile-fnsea/public/css/image-stack.css",
+		"/C/Users/leb/mobile-fnsea/mobile-fnsea.sublime-workspace",
+		"/C/Users/leb/mobile-fnsea/public/js/collections/albums.js",
+		"/C/Users/leb/mobile-fnsea/public/js/views/AlbumListView.js",
+		"/C/Users/leb/mobile-fnsea/public/js/app.js",
+		"/C/Users/leb/mobile-fnsea/public/js/main.js",
+		"/C/Users/leb/mobile-fnsea/public/js/libs/backbone/backbone.paginator.js",
+		"/C/Users/leb/mobile-fnsea/public/js/templates/ArticleTemplate.html",
+		"/C/Users/leb/mobile-fnsea/public/js/libs/backbone/backbone.js",
+		"/C/Users/leb/mobile-fnsea/public/js/libs/backbone/backbone2.js",
+		"/C/Users/leb/mobile-fnsea/public/js/models/article.js",
+		"/C/Users/leb/mobile-fnsea/public/js/views/ArticleListView.js",
+		"/C/Users/leb/mobile-fnsea/public/js/views/VideoListView.js",
+		"/C/Users/leb/mobile-fnsea/public/js/views/ArticleView.js",
+		"/C/Users/leb/mobile-fnsea/public/js/libs/require/require.js",
+		"/C/Users/leb/AppData/Roaming/Sublime Text 2/Packages/User/bbview.sublime-snippet",
+		"/C/Users/leb/AppData/Roaming/Sublime Text 2/Packages/User/bbmodel.sublime-snippet",
+		"/C/Users/leb/AppData/Roaming/Sublime Text 2/Packages/Git/Git.sublime-settings",
+		"/C/Users/leb/AppData/Roaming/Sublime Text 2/Packages/Default/Preferences.sublime-settings",
+		"/C/Users/leb/AppData/Roaming/Sublime Text 2/Packages/User/Preferences.sublime-settings",
+		"/C/Users/leb/mobile-fnsea/public/js/utils/DateUtil.js",
+		"/C/Users/leb/mobile-fnsea/public/js/models/video.js",
+		"/C/Users/leb/mobile-fnsea/public/js/models/photo.js",
+		"/C/Users/leb/mobile-fnsea/public/js/models/album.js",
+		"/C/Users/leb/mobile-fnsea/public/js/collections/photos.js",
+		"/C/Users/leb/mobile-fnsea/public/js/layout/klass.js",
+		"/C/Users/leb/Desktop/YTFNSEAGallery/grunt.js",
+		"/C/Users/leb/Desktop/YTFNSEAGallery/scripts/utils/ConfigManager.js",
+		"/C/Users/leb/Desktop/YTFNSEAGallery/scripts/main.js",
+		"/C/Users/leb/Desktop/YTFNSEAGallery/css/screen.css",
+		"/C/Users/leb/Desktop/YTFNSEAGallery/scripts/views/GalleryFilter.js",
+		"/C/Users/leb/Desktop/YTFNSEAGallery/scripts/templates/GalleryFilter.html",
+		"/C/Users/leb/Desktop/YTFNSEAGallery/scripts/jquery.customselect.js",
+		"/C/Users/leb/Desktop/YTFNSEAGallery/scripts/collections/PaginatedPlaylist.js",
+		"/C/Users/leb/Desktop/YTFNSEAGallery/scripts/models/Playlist.js",
+		"/C/Users/leb/Desktop/YTFNSEAGallery/scripts/models/Video.js",
+		"/C/Users/leb/Desktop/YTFNSEAGallery/scripts/utils/DateUtil.js",
+		"/C/Users/leb/Desktop/YTFNSEAGallery/scripts/router.js",
+		"/C/Users/leb/Desktop/YTFNSEAGallery/js/utils/ConfigManager.js",
+		"/C/Users/leb/Desktop/YTFNSEAGallery/js/views/Gallery.js",
+		"/C/Users/leb/Desktop/YTFNSEAGallery/js/views/GalleryItem.js",
+		"/C/Users/leb/Desktop/YTFNSEAGallery/js/views/Playlist.js",
+		"/C/Users/leb/Desktop/YTFNSEAGallery/js/main.js",
+		"/C/Users/leb/Desktop/YTFNSEAGallery/js/libs/greensock/tweenmax.min.js",
+		"/C/Users/leb/Desktop/YTFNSEAGallery/js/libs/greensock/TweenMax.min.js",
+		"/C/Users/leb/Desktop/YTFNSEAGallery/bin/youtube-fnsea-min.js",
+		"/C/Users/leb/Desktop/YTFNSEAGallery/css/style.css",
+		"/C/Users/leb/Desktop/FNSEA Source/trunk/Projet/Smile/js/main.js",
+		"/C/Users/leb/Desktop/YTFNSEAGallery/js/libs/require/require.js",
+		"/C/Users/leb/Desktop/YTFNSEAGallery/bin/optimized.js",
+		"/C/Users/leb/FO_2013/routes/fo.js",
+		"/C/Users/leb/mobile-fnsea/public/css/ribbon.css",
+		"/C/Users/leb/FO_2013/public/index.html",
+		"/C/Users/leb/Desktop/Bootstrap Test/post.html",
+		"/C/Users/leb/Desktop/Bootstrap Test/post.txt",
+		"/C/Users/leb/Desktop/Bootstrap Test/main2.html",
+		"/C/Users/leb/Desktop/Bootstrap Test/main.html",
+		"//192.168.2.165/e$/Inetpub/wwwroot/fnsea/scripts/elections.js",
+		"/C/Users/leb/Desktop/YTFNSEAGallery/js/app.js",
+		"/C/Users/leb/Desktop/FNSEA Source/Site/css/screen.css"
+	],
+	"find":
+	{
+		"height": 36.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+			"C:\\Users\\leb\\mobile-fnsea\\public",
+			"\\\\192.168.2.138\\e$\\Inetpub\\ExtranetRefonte\\sites",
+			"",
+			"C:\\Users\\leb\\mobile-fnsea",
+			"C:\\Users\\leb\\Desktop\\YTFNSEAGallery",
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"updateContent",
+			"fragment",
+			"anotherOne.Scope=MyScope;",
+			"actuList",
+			"mgsNoResult",
+			"msgRechercheEchoue",
+			"RadioButton",
+			"ftxtenddate",
+			"test",
+			"mgsNoResult",
+			"SearchManager",
+			"history",
+			"0px",
+			"6deg",
+			"PhotoListView",
+			"truncated-plus",
+			"listContainer",
+			"34",
+			"fnplait",
+			"default.aspx",
+			"asclcp",
+			"info",
+			"fetch",
+			"reset",
+			"update",
+			"historyTab",
+			"callback",
+			"AlbumListView",
+			"currentView",
+			"pagerBtn",
+			"this",
+			"ConfigManager",
+			"		},\n		",
+			"},\n",
+			"ConfigManager",
+			"loader",
+			"GalleryFilter",
+			"reset",
+			"resetDDL",
+			"tweenmax",
+			"getLastVideoUrl",
+			"tweenmax",
+			"js",
+			"history",
+			")\n",
+			"custom-navbar",
+			"fontello",
+			"line-height",
+			"h2",
+			"figure",
+			"post-entry",
+			"post-wrapper",
+			"post-entry",
+			"post-wrapper",
+			"blog-post-wrapper",
+			">\n",
+			"navbar-fixed-top",
+			"fontello",
+			"content",
+			"left-page",
+			"token",
+			"countBy",
+			"this field",
+			"veuillez",
+			"inline",
+			"inline-inputs",
+			"container",
+			"assets",
+			"Videos",
+			"PhotoListView",
+			"umbracoNode",
+			"DropDownMenu",
+			"ArticleListView",
+			"urlRoot",
+			"url",
+			"niceUrl",
+			"callback",
+			"parse",
+			"fetch",
+			"pager"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"article-entry",
+			"article-wrapper"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 5,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "public/js/collections/videos.js",
+					"settings":
+					{
+						"buffer_size": 1380,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								177,
+								177
+							]
+						],
+						"settings":
+						{
+							"annotations":
+							[
+								"TODO",
+								"README",
+								"FIXME"
+							],
+							"auto_name": "define([",
+							"csslint_options":
+							{
+								"adjoining-classes": "warning",
+								"box-model": true,
+								"box-sizing": "warning",
+								"compatible-vendor-prefixes": "warning",
+								"display-property-grouping": true,
+								"duplicate-background-images": "warning",
+								"duplicate-properties": true,
+								"empty-rules": true,
+								"errors": true,
+								"fallback-colors": "warning",
+								"floats": "warning",
+								"font-faces": "warning",
+								"font-sizes": "warning",
+								"gradients": "warning",
+								"ids": "warning",
+								"import": "warning",
+								"important": "warning",
+								"known-properties": true,
+								"outline-none": "warning",
+								"overqualified-elements": "warning",
+								"qualified-headings": "warning",
+								"regex-selectors": "warning",
+								"rules-count": "warning",
+								"shorthand": "warning",
+								"star-property-hack": "warning",
+								"text-indent": "warning",
+								"underscore-property-hack": "warning",
+								"unique-headings": "warning",
+								"universal-selector": "warning",
+								"vendor-prefix": true,
+								"zero-units": "warning"
+							},
+							"gjslint_ignore":
+							[
+								110
+							],
+							"gjslint_options":
+							[
+							],
+							"javascript_linter": "jshint",
+							"jshint_options":
+							{
+								"browser": true,
+								"evil": true,
+								"regexdash": true,
+								"sub": true,
+								"trailing": true,
+								"wsh": true
+							},
+							"pep8": true,
+							"pep8_ignore":
+							[
+								"E501"
+							],
+							"perl_linter": "perlcritic",
+							"pyflakes_ignore":
+							[
+							],
+							"pyflakes_ignore_import_*": true,
+							"sublimelinter": true,
+							"sublimelinter_delay": 2,
+							"sublimelinter_disable":
+							[
+							],
+							"sublimelinter_executable_map":
+							{
+							},
+							"sublimelinter_fill_outlines": false,
+							"sublimelinter_gutter_marks": false,
+							"sublimelinter_mark_style": "outline",
+							"sublimelinter_notes": false,
+							"sublimelinter_objj_check_ascii": false,
+							"sublimelinter_popup_errors_on_save": false,
+							"sublimelinter_syntax_map":
+							{
+								"C++": "c",
+								"Python Django": "python",
+								"Ruby on Rails": "ruby"
+							},
+							"sublimelinter_wrap_find": true,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "public/js/views/AppView.js",
+					"settings":
+					{
+						"buffer_size": 492,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								404,
+								404
+							]
+						],
+						"settings":
+						{
+							"annotations":
+							[
+								"TODO",
+								"README",
+								"FIXME"
+							],
+							"csslint_options":
+							{
+								"adjoining-classes": "warning",
+								"box-model": true,
+								"box-sizing": "warning",
+								"compatible-vendor-prefixes": "warning",
+								"display-property-grouping": true,
+								"duplicate-background-images": "warning",
+								"duplicate-properties": true,
+								"empty-rules": true,
+								"errors": true,
+								"fallback-colors": "warning",
+								"floats": "warning",
+								"font-faces": "warning",
+								"font-sizes": "warning",
+								"gradients": "warning",
+								"ids": "warning",
+								"import": "warning",
+								"important": "warning",
+								"known-properties": true,
+								"outline-none": "warning",
+								"overqualified-elements": "warning",
+								"qualified-headings": "warning",
+								"regex-selectors": "warning",
+								"rules-count": "warning",
+								"shorthand": "warning",
+								"star-property-hack": "warning",
+								"text-indent": "warning",
+								"underscore-property-hack": "warning",
+								"unique-headings": "warning",
+								"universal-selector": "warning",
+								"vendor-prefix": true,
+								"zero-units": "warning"
+							},
+							"gjslint_ignore":
+							[
+								110
+							],
+							"gjslint_options":
+							[
+							],
+							"javascript_linter": "jshint",
+							"jshint_options":
+							{
+								"browser": true,
+								"evil": true,
+								"regexdash": true,
+								"sub": true,
+								"trailing": true,
+								"wsh": true
+							},
+							"pep8": true,
+							"pep8_ignore":
+							[
+								"E501"
+							],
+							"perl_linter": "perlcritic",
+							"pyflakes_ignore":
+							[
+							],
+							"pyflakes_ignore_import_*": true,
+							"sublimelinter": true,
+							"sublimelinter_delay": 2,
+							"sublimelinter_disable":
+							[
+							],
+							"sublimelinter_executable_map":
+							{
+							},
+							"sublimelinter_fill_outlines": false,
+							"sublimelinter_gutter_marks": false,
+							"sublimelinter_mark_style": "outline",
+							"sublimelinter_notes": false,
+							"sublimelinter_objj_check_ascii": false,
+							"sublimelinter_popup_errors_on_save": false,
+							"sublimelinter_syntax_map":
+							{
+								"C++": "c",
+								"Python Django": "python",
+								"Ruby on Rails": "ruby"
+							},
+							"sublimelinter_wrap_find": true,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "public/js/views/list/VideoList.js",
+					"settings":
+					{
+						"buffer_size": 655,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								631,
+								631
+							]
+						],
+						"settings":
+						{
+							"auto_name": "define([",
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "public/js/views/itemRenderer/VideoItem.js",
+					"settings":
+					{
+						"buffer_size": 529,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								347,
+								347
+							]
+						],
+						"settings":
+						{
+							"auto_name": "define([",
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "public/js/templates/VideoItemTemplate.html",
+					"settings":
+					{
+						"buffer_size": 19,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								19,
+								19
+							]
+						],
+						"settings":
+						{
+							"auto_name": "<p><%= title %></p>",
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "public/index.html",
+					"settings":
+					{
+						"buffer_size": 633,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								334,
+								334
+							]
+						],
+						"settings":
+						{
+							"annotations":
+							[
+								"TODO",
+								"README",
+								"FIXME"
+							],
+							"csslint_options":
+							{
+								"adjoining-classes": "warning",
+								"box-model": true,
+								"box-sizing": "warning",
+								"compatible-vendor-prefixes": "warning",
+								"display-property-grouping": true,
+								"duplicate-background-images": "warning",
+								"duplicate-properties": true,
+								"empty-rules": true,
+								"errors": true,
+								"fallback-colors": "warning",
+								"floats": "warning",
+								"font-faces": "warning",
+								"font-sizes": "warning",
+								"gradients": "warning",
+								"ids": "warning",
+								"import": "warning",
+								"important": "warning",
+								"known-properties": true,
+								"outline-none": "warning",
+								"overqualified-elements": "warning",
+								"qualified-headings": "warning",
+								"regex-selectors": "warning",
+								"rules-count": "warning",
+								"shorthand": "warning",
+								"star-property-hack": "warning",
+								"text-indent": "warning",
+								"underscore-property-hack": "warning",
+								"unique-headings": "warning",
+								"universal-selector": "warning",
+								"vendor-prefix": true,
+								"zero-units": "warning"
+							},
+							"gjslint_ignore":
+							[
+								110
+							],
+							"gjslint_options":
+							[
+							],
+							"javascript_linter": "jshint",
+							"jshint_options":
+							{
+								"browser": true,
+								"evil": true,
+								"regexdash": true,
+								"sub": true,
+								"trailing": true,
+								"wsh": true
+							},
+							"pep8": true,
+							"pep8_ignore":
+							[
+								"E501"
+							],
+							"perl_linter": "perlcritic",
+							"pyflakes_ignore":
+							[
+							],
+							"pyflakes_ignore_import_*": true,
+							"sublimelinter": true,
+							"sublimelinter_delay": 2,
+							"sublimelinter_disable":
+							[
+							],
+							"sublimelinter_executable_map":
+							{
+							},
+							"sublimelinter_fill_outlines": false,
+							"sublimelinter_gutter_marks": false,
+							"sublimelinter_mark_style": "outline",
+							"sublimelinter_notes": false,
+							"sublimelinter_objj_check_ascii": false,
+							"sublimelinter_popup_errors_on_save": false,
+							"sublimelinter_syntax_map":
+							{
+								"C++": "c",
+								"Python Django": "python",
+								"Ruby on Rails": "ruby"
+							},
+							"sublimelinter_wrap_find": true,
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 6,
+					"file": "public/css/style.css",
+					"settings":
+					{
+						"buffer_size": 228,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								208,
+								208
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "/C/Users/leb/Desktop/themeforest-3708895-nevia-responsive-html5-template/HTML/css/style.css",
+					"settings":
+					{
+						"buffer_size": 76472,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								777,
+								777
+							]
+						],
+						"settings":
+						{
+							"annotations":
+							[
+								"TODO",
+								"README",
+								"FIXME"
+							],
+							"csslint_options":
+							{
+								"adjoining-classes": "warning",
+								"box-model": true,
+								"box-sizing": "warning",
+								"compatible-vendor-prefixes": "warning",
+								"display-property-grouping": true,
+								"duplicate-background-images": "warning",
+								"duplicate-properties": true,
+								"empty-rules": true,
+								"errors": true,
+								"fallback-colors": "warning",
+								"floats": "warning",
+								"font-faces": "warning",
+								"font-sizes": "warning",
+								"gradients": "warning",
+								"ids": "warning",
+								"import": "warning",
+								"important": "warning",
+								"known-properties": true,
+								"outline-none": "warning",
+								"overqualified-elements": "warning",
+								"qualified-headings": "warning",
+								"regex-selectors": "warning",
+								"rules-count": "warning",
+								"shorthand": "warning",
+								"star-property-hack": "warning",
+								"text-indent": "warning",
+								"underscore-property-hack": "warning",
+								"unique-headings": "warning",
+								"universal-selector": "warning",
+								"vendor-prefix": true,
+								"zero-units": "warning"
+							},
+							"gjslint_ignore":
+							[
+								110
+							],
+							"gjslint_options":
+							[
+							],
+							"javascript_linter": "jshint",
+							"jshint_options":
+							{
+								"browser": true,
+								"evil": true,
+								"regexdash": true,
+								"sub": true,
+								"trailing": true,
+								"wsh": true
+							},
+							"pep8": true,
+							"pep8_ignore":
+							[
+								"E501"
+							],
+							"perl_linter": "perlcritic",
+							"pyflakes_ignore":
+							[
+							],
+							"pyflakes_ignore_import_*": true,
+							"sublimelinter": true,
+							"sublimelinter_delay": 2,
+							"sublimelinter_disable":
+							[
+							],
+							"sublimelinter_executable_map":
+							{
+							},
+							"sublimelinter_fill_outlines": false,
+							"sublimelinter_gutter_marks": false,
+							"sublimelinter_mark_style": "outline",
+							"sublimelinter_notes": false,
+							"sublimelinter_objj_check_ascii": false,
+							"sublimelinter_popup_errors_on_save": false,
+							"sublimelinter_syntax_map":
+							{
+								"C++": "c",
+								"Python Django": "python",
+								"Ruby on Rails": "ruby"
+							},
+							"sublimelinter_wrap_find": true,
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 36.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			0.537825317488,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.git":
+	{
+		"height": 130.0
+	},
+	"replace":
+	{
+		"height": 66.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"video",
+				"public/js/views/list/VideoList.js"
+			],
+			[
+				"videol",
+				"public/js/views/list/VideoList.js"
+			],
+			[
+				"paget",
+				"public/js/templates/PagerTemplate.html"
+			],
+			[
+				"articleit",
+				"public/js/templates/ArticleItemTemplate.html"
+			],
+			[
+				"",
+				"database/121312_presses.json"
+			],
+			[
+				"phot",
+				"public/js/views/PhotoListView.js"
+			],
+			[
+				"articles",
+				"public/js/collections/articles.js"
+			],
+			[
+				"pager",
+				"public/js/templates/PagerTemplate.html"
+			],
+			[
+				"article",
+				"public/js/templates/ArticleItemTemplate.html"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 240.0,
+	"status_bar_visible": true
+}
