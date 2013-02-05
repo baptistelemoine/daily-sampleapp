@@ -1,6 +1,63 @@
 @import url("http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700");
 
-body {
-	font-family: "Open Sans", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
-	background: url(../images/noise.png) repeat;
+body {	
+	/*background: url(../images/noise.png) repeat;*/
+}
+
+h1,h2,h3,h4,h5,body{
+	font-family: "Open Sans", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+	color: #333;
+	font-weight: 600;
+	letter-spacing: -0.2px;
+}
+
+h5{
+	margin: 0 10px 0 10px;
+	font-size: 13px!important;
+	margin-bottom: 5px;
+}
+
+div[data-view=video-item] .item-container{
+	/*-webkit-transform: translate3d(0px, 0px, 0px);*/
+	margin: 10px;
+}
+
+div[data-view=videos-list] {
+	-webkit-transition:all .5s ease-in-out;
+  -moz-transition:all .5s ease-in-out;
+  -o-transition:all .5s ease-in-out;
+  -ms-transition:all .5s ease-in-out;
+  transition:all .5s ease-in-out;
+}
+
+.img-container{
+	/*min-height: 120px;*/
+	overflow: hidden;
+	height:120px;
+}
+
+.img-container img {
+	max-width: 100%;
+}
+
+.info span{
+	color: #888;
+	font-size: 13px;
+	font-weight: 300;
+}
+.info{
+	padding: 14px 0 19px 0;
+	background: #fff;
+	border-radius: 0 0 2px 2px;
+	border-top: 5px solid #e5e5e5;
+	text-align: center;
+	-webkit-transition: all 180ms ease-in-out;
+	-moz-transition: all 180ms ease-in-out;
+	-o-transition: all 180ms ease-in-out;
+	-ms-transition: all 180ms ease-in-out;
+	transition: all 180ms ease-in-out;
+	-webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.12), 0 0 1px rgba(0,0,0,0.1);
+	box-shadow: 0 1px 1px rgba(0,0,0,0.12), 0 0 1px rgba(0,0,0,0.1);
+	
+	min-height: 90px;
 }

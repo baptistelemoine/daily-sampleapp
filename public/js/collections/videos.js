@@ -22,10 +22,10 @@ define([
         paginator_ui: {
             firstPage: 0,
             currentPage: 1,
-            perPage: 5,
+            perPage: 6,
             totalRecords:0,
             totalPages: 0,
-            genericFields:['title','thumbnail_medium_url','views_total'],
+            genericFields:['title','thumbnail_large_url','views_total'],
             fields:function() {
                 if(this.urlParam.fields)
                     return this.genericFields.concat(this.urlParam.fields).join(',');

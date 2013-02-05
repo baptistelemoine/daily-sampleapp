@@ -1,11 +1,12 @@
 define([
   'jquery',
+  'quo',
   'underscore',
   'backbone',
   'collections/Videos',
   'views/list/VideoList'
 
-], function ($, _, Backbone, Videos, VideoList){
+], function ($, $$, _, Backbone, Videos, VideoList){
 	
 	return Backbone.View.extend({
 		
@@ -17,11 +18,18 @@ define([
 
 			videos.collection.pager({
 				success:function(data){
-					console.log(data);
+					//console.log(data);
 				}
 			});
 
 			$('div[data-view="videos-list"]').append(videos.el);
+
+			$$('div[data-view="videos-list"]').swipeLeft(function(){
+				$(this).css('transform','translateX(-50%)');
+			});
+			$$('div[data-view="videos-list"]').swipeRight(function(){
+				$(this).css('transform','translateX(0%)');
+			});
 
 		}
 		
