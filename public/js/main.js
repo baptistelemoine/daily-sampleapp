@@ -9,7 +9,8 @@ require.config({
     text: 'libs/text/index',
     paginator:'libs/backbone.paginator/index',
     bootstrap:'libs/bootstrap/bootstrap',
-    quo:'libs/quo/quo.debug'
+    quo:'libs/quo/quo.debug',
+    tweenmax:'libs/tweenmax/TweenMax.min'
     
 
   },
@@ -24,6 +25,9 @@ require.config({
     },
     underscore: {
         exports: '_'
+    },
+    tweenmax:{
+        exports:'TweenMax'
     },
     paginator : ['underscore', 'backbone'],
     bootstrap : ['jquery']

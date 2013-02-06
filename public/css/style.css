@@ -17,17 +17,22 @@ h5{
 	margin-bottom: 5px;
 }
 
-div[data-view=video-item] .item-container{
+div[data-page] .item-container{
 	/*-webkit-transform: translate3d(0px, 0px, 0px);*/
 	margin: 10px;
 }
 
-div[data-view=videos-list] {
-	-webkit-transition:all .5s ease-in-out;
-  -moz-transition:all .5s ease-in-out;
-  -o-transition:all .5s ease-in-out;
-  -ms-transition:all .5s ease-in-out;
-  transition:all .5s ease-in-out;
+#wrapper{
+	overflow: hidden;	
+}
+
+#slider-container{
+	overflow: hidden;
+	width: 300%;
+}
+
+.page{
+	width: 33.333333333333%;
 }
 
 .img-container{
