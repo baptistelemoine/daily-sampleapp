@@ -2,33 +2,35 @@ define([
     'jquery',
     'underscore',
     'backbone',
-    'paginator'
+    'paginator',
+    'models/video'
 
-], function ($, _, Backbone, Paginator){
+], function ($, _, Backbone, Paginator, video){
 
     return Backbone.Paginator.requestPager.extend({
         
+        model:video,
 
         initialize:function(param){
-            this.urlParam = param;
+            this.param = param;
         },
         
         paginator_core: {
             type: 'GET',
             dataType: 'json',
-            url:function() { return 'https://api.dailymotion.com/channel/'+this.urlParam.channel+'/videos';}
+            url:function() { return 'https://api.dailymotion.com/channel/'+this.param.channel+'/videos';}
         },
         
         paginator_ui: {
             firstPage: 0,
             currentPage: 1,
-            perPage: 6,
+            perPage: 8,
             totalRecords:0,
             totalPages: 0,
-            genericFields:['title','thumbnail_large_url','views_total'],
+            genericFields:['title','thumbnail_large_url','views_total', 'owner'],
             fields:function() {
-                if(this.urlParam.fields)
-                    return this.genericFields.concat(this.urlParam.fields).join(',');
+                if(this.param.fields)
+                    return this.genericFields.concat(this.param.fields).join(',');
                 else return this.genericFields.join(',');
             }
         },

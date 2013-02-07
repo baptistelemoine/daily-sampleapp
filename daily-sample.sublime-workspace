@@ -351,7 +351,7 @@
 			"file": "public/css/style.css",
 			"settings":
 			{
-				"buffer_size": 1314,
+				"buffer_size": 1329,
 				"line_ending": "Windows"
 			}
 		},
@@ -367,9 +367,21 @@
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 242.0,
+		"height": 173.0,
 		"selected_items":
 		[
+			[
+				"commi",
+				"Git: Commit"
+			],
+			[
+				"add",
+				"Git: Add..."
+			],
+			[
+				"stat",
+				"Git: Status"
+			],
 			[
 				"comm",
 				"Git: Commit"
@@ -379,15 +391,7 @@
 				"Git: Status"
 			],
 			[
-				"add",
-				"Git: Add..."
-			],
-			[
 				"st",
-				"Git: Status"
-			],
-			[
-				"stat",
 				"Git: Status"
 			],
 			[
@@ -487,7 +491,7 @@
 				"Snippet: Backbone.Model"
 			]
 		],
-		"width": 512.0
+		"width": 416.0
 	},
 	"console":
 	{
@@ -755,7 +759,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 1,
 			"sheets":
 			[
 				{
@@ -770,8 +774,8 @@
 						"selection":
 						[
 							[
-								1745,
-								1745
+								922,
+								922
 							]
 						],
 						"settings":
@@ -864,7 +868,8 @@
 								"Ruby on Rails": "ruby"
 							},
 							"sublimelinter_wrap_find": true,
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 600.0,
@@ -884,8 +889,8 @@
 						"selection":
 						[
 							[
-								643,
-								643
+								429,
+								429
 							]
 						],
 						"settings":
@@ -999,15 +1004,15 @@
 					"file": "public/css/style.css",
 					"settings":
 					{
-						"buffer_size": 1314,
+						"buffer_size": 1329,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								628,
-								628
+								572,
+								572
 							]
 						],
 						"settings":

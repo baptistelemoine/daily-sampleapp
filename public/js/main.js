@@ -9,9 +9,9 @@ require.config({
     text: 'libs/text/index',
     paginator:'libs/backbone.paginator/index',
     bootstrap:'libs/bootstrap/bootstrap',
-    quo:'libs/quo/quo.debug',
-    tweenmax:'libs/tweenmax/TweenMax.min'
-    
+    tweenmax:'libs/tweenmax/TweenMax.min',
+    swipeview:'libs/cubiq/swipeview',
+    layout:'layout/scripts'    
 
   },
   
@@ -20,14 +20,15 @@ require.config({
         deps: ['underscore', 'jquery'],
         exports: 'Backbone'
     },
-    quo:{
-        exports:'$$'
-    },
     underscore: {
         exports: '_'
     },
     tweenmax:{
         exports:'TweenMax'
+    },
+    layout:['jquery'],
+    swipeview:{
+        exports:'SwipeView'
     },
     paginator : ['underscore', 'backbone'],
     bootstrap : ['jquery']

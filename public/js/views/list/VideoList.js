@@ -15,6 +15,7 @@ define([
 
           this.collection.on('add', this.addOne);
           this.collection.on('reset', this.addAll);
+          this.collection.on('change', this.addAll);
 
         },
 
@@ -31,6 +32,7 @@ define([
         },
 
         addAll:function(){
+            this.$el.empty();
             this.collection.each(this.addOne);
         }
 
