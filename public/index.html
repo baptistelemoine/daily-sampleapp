@@ -12,22 +12,7 @@
   <body>
     <!-- Main wrapper - fluid layout -->
     <div id="wrapper">
-        <div id="main-container" class="row-fluid">
-          <div class="row-fluid" data-role="header-list">
-            <h2>Channel : News <span>/ Page <span class="blue">1</span> of 120</span></h2>        
-          </div>
-          <div class="row-fluid" data-role="list-filter">
-            <div id="filters" class="filters-dropdown"><span>Channel</span>
-                <ul class="option-set" data-option-key="filter">
-                  <li><a href="#filter" class="selected" data-option-value="*">Music</a></li>
-                  <li><a href="#filter" data-option-value=".photography">Fun</a></li>
-                  <li><a href="#filter" data-option-value=".architecture">Short films</a></li>
-                  <li><a href="#filter" data-option-value=".identity">Sport</a></li>
-                  <li><a href="#filter" data-option-value=".technology">TV</a></li>
-                  <li><a href="#filter" data-option-value=".technology">Video games</a></li>
-                </ul>
-            </div>
-          </div>
+        <div id="main-container" class="row-fluid">         
           <div id="slider-container">
               <div class="row-fluid page" data-page="1">
               </div>
@@ -36,7 +21,9 @@
               <div class="row-fluid page" data-page="3">
               </div>
           </div>
-        </div>   
+        </div>
+        <div id="video-modal" class="modal hide fade" tabindex="-1" role="dialog">
+        </div>
     </div>
     <!-- Load the app witj require -->
     <script data-main="js/main" src="js/libs/requirejs/index.js"></script>

@@ -27,7 +27,7 @@ define([
             perPage: 8,
             totalRecords:0,
             totalPages: 0,
-            genericFields:['title','thumbnail_large_url','views_total', 'owner'],
+            genericFields:['title','thumbnail_large_url','views_total', 'owner', 'id'],
             fields:function() {
                 if(this.param.fields)
                     return this.genericFields.concat(this.param.fields).join(',');

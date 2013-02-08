@@ -9,9 +9,10 @@ require.config({
     text: 'libs/text/index',
     paginator:'libs/backbone.paginator/index',
     bootstrap:'libs/bootstrap/bootstrap',
-    tweenmax:'libs/tweenmax/TweenMax.min',
     swipeview:'libs/cubiq/swipeview',
-    layout:'layout/scripts'    
+    layout:'layout/scripts',
+    hammer:'libs/hammer/hammer',
+    jqHammer:'libs/hammer/jquery.hammer'
 
   },
   
@@ -23,13 +24,11 @@ require.config({
     underscore: {
         exports: '_'
     },
-    tweenmax:{
-        exports:'TweenMax'
-    },
-    layout:['jquery'],
+    layout:['jquery', 'jqHammer'],
     swipeview:{
         exports:'SwipeView'
     },
+    jqHammer:['jquery', 'hammer'],
     paginator : ['underscore', 'backbone'],
     bootstrap : ['jquery']
   }

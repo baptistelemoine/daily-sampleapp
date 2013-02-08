@@ -9,8 +9,9 @@ define([
 
         routes:{
                 
-            ''     : 'root',
-            'test' : 'getTest'
+            ''              : 'default',
+            'video/:id'     : 'getVideo',
+            'channel/:name' : 'getChannel'
         }
   	});
 });

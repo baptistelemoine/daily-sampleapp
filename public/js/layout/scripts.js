@@ -1,5 +1,6 @@
 jQuery(document).ready(function($) {
 
+	/* FILTERS DROP DOWN MENU */
 	function DropDown(el) {
 			this.dd = el;
 			this.opts = this.dd.find('ul.option-set > li');
@@ -13,31 +14,33 @@ jQuery(document).ready(function($) {
 		initEvents : function() {
 			var obj = this;
 
-			obj.dd.on('click', function(event){
-				$(this).toggleClass('active');
-				event.stopPropagation();
+			obj.dd.hammer({
+					prevent_default: false
+				}).on('tap', function(event){
+					$(this).toggleClass('active');
+					event.stopPropagation();
 			});
-			obj.opts.on('click',function(){
-				var opt = $(this);
-				obj.val = opt.text();
-				obj.index = opt.index();
-				obj.placeholder.text('' + obj.val);
+
+			obj.opts.hammer({
+					prevent_default: false
+				}).on('tap', function(event){
+					var opt = $(this);
+					obj.val = opt.text();
+					obj.index = opt.index();
+					obj.placeholder.text('' + obj.val);
 			});
 		}
 	};
 
-	$(function() {
+	/* EMPTY MODAL WHEN HIDDEN */
+	$('#video-modal').on('hide', function (e){
+		$(this).empty();
+	});
 
+	//listen for ddl rendering
+	$(window).on('ddReady', function (e, param) {
 		var dd = new DropDown( $('#filters') );
-
-		$(document).click(function() {
-			$('.filters-dropdown').removeClass('active');
-		});
-
-		$(".option-set").click(function() {
-			$('.filters-dropdown').toggleClass('active');
-		});
-
+		$('.option-set li a[data-option-value="'+param+'"]').toggleClass('selected');
 	});
 
 });

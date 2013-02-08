@@ -53,7 +53,7 @@ div[data-page] .item-container{
 	width: 100%;
 	overflow: hidden;
 	position: relative;
-	min-height: 470px;
+	min-height: 520px;
 	text-align: center;	
 }
 
@@ -68,7 +68,8 @@ div[data-page] .item-container{
 .img-container{
 	/*min-height: 120px;*/
 	overflow: hidden;
-	height:80px;
+	height:100px;
+	background-color: #000;
 }
 
 .img-container img {
@@ -198,3 +199,7 @@ ul.option-set li a:active { background: #fff; }
 
 .ie8 .filters-dropdown .option-set { display: none; }
 .ie8 .filters-dropdown.active .option-set { display: block; }
+
+.modal-body{
+	padding: 0!important;
+}
