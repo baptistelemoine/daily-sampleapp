@@ -1,6 +1,6 @@
 require.config({
   
-  //baseUrl:'',
+  baseUrl:'js/',
   
   paths: {
     jquery: 'libs/jquery/jquery.min',

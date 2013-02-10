@@ -2,7 +2,7 @@ define([
   'jquery',
   'underscore',
   'backbone',
-  'collections/Videos',
+  'collections/videos',
   'views/list/VideoList',
   'swipeview',
   'router',
