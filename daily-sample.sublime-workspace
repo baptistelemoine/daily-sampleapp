@@ -438,16 +438,24 @@
 				"buffer_size": 444,
 				"line_ending": "Windows"
 			}
+		},
+		{
+			"file": "server.js",
+			"settings":
+			{
+				"buffer_size": 385,
+				"line_ending": "Windows"
+			}
 		}
 	],
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 392.0,
+		"height": 242.0,
 		"selected_items":
 		[
 			[
-				"com",
+				"comm",
 				"Git: Commit"
 			],
 			[
@@ -455,7 +463,7 @@
 				"Git: Add..."
 			],
 			[
-				"sta",
+				"stat",
 				"Git: Status"
 			],
 			[
@@ -463,12 +471,16 @@
 				"Git: Commit"
 			],
 			[
-				"stat",
-				"Git: Status"
+				"pa",
+				"Package Control: Install Package"
 			],
 			[
-				"comm",
+				"com",
 				"Git: Commit"
+			],
+			[
+				"sta",
+				"Git: Status"
 			],
 			[
 				"st",
@@ -563,10 +575,6 @@
 				"Package Control: Install Package"
 			],
 			[
-				"pa",
-				"Package Control: Install Package"
-			],
-			[
 				"snippet",
 				"Snippet: Backbone.Model"
 			]
@@ -588,6 +596,7 @@
 	},
 	"file_history":
 	[
+		"/C/Users/Baptiste/Desktop/daily-sampleapp/public/js/main.js",
 		"/C/Users/Baptiste/Desktop/daily-sampleapp/public/js/views/ModalView.js",
 		"/C/Users/Baptiste/Desktop/daily-sampleapp/public/css/style.css",
 		"/C/Users/Baptiste/Desktop/daily-sampleapp/public/js/templates/VideoItemTemplate.html",
@@ -714,8 +723,7 @@
 		"/C/Users/leb/Desktop/YTFNSEAGallery/scripts/utils/ConfigManager.js",
 		"/C/Users/leb/Desktop/YTFNSEAGallery/scripts/main.js",
 		"/C/Users/leb/Desktop/YTFNSEAGallery/css/screen.css",
-		"/C/Users/leb/Desktop/YTFNSEAGallery/scripts/views/GalleryFilter.js",
-		"/C/Users/leb/Desktop/YTFNSEAGallery/scripts/templates/GalleryFilter.html"
+		"/C/Users/leb/Desktop/YTFNSEAGallery/scripts/views/GalleryFilter.js"
 	],
 	"find":
 	{
@@ -723,7 +731,7 @@
 	},
 	"find_in_files":
 	{
-		"height": 0.0,
+		"height": 96.0,
 		"where_history":
 		[
 			"C:\\Users\\leb\\mobile-fnsea\\public",
@@ -739,6 +747,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"collections/videos",
 			"button",
 			"quo",
 			"urlParam",
@@ -857,8 +866,8 @@
 						"selection":
 						[
 							[
-								15,
-								15
+								362,
+								362
 							]
 						],
 						"settings":
@@ -1034,6 +1043,32 @@
 						"settings":
 						{
 							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "server.js",
+					"settings":
+					{
+						"buffer_size": 385,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								383,
+								383
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
