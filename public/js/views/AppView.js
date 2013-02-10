@@ -24,6 +24,7 @@ define([
 			this.appRouter.on('route:getChannel', this.getChannel);
 			this.appRouter.on('route:default', this.defaultPath);
 			Backbone.history.start({pushState:false});
+
 		},
 
 		defaultPath:function(){
@@ -82,11 +83,9 @@ define([
 			});
 
 			//listen to slider flip, & load upcoming pages
-			slider.onFlip(function (){
-				
+			slider.onFlip(function (){				
 				//update current page
-				headerModel.set('page', slider.pageIndex+1);
-				
+				headerModel.set('page', slider.pageIndex+1);				
 				//request api
 				for (i=0; i<3; i++) {
 					upcoming = slider.masterPages[i].dataset.upcomingPageIndex;
@@ -98,12 +97,14 @@ define([
 				}
 			});
 
+			this.historyPrev = Backbone.history.fragment;
+
 		},
 
 		getVideo:function(hash){
 			
 			//request api and push infos about single video
-			var url = 'https://api.dailymotion.com/video/'+hash+'?fields=title,embed_url';
+			var url = 'https://api.dailymotion.com/video/'+hash+'?fields=title,embed_url,description';
 			var video = new VideoModel();
 			video.url = url;
 			
@@ -115,9 +116,12 @@ define([
 			//fetch the model
 			modalView.model.fetch();
 
+			var self = this;
 			//launch bootstrap modal
 			$('#video-modal').modal();
-
+			$('#video-modal').on('hide', function (e){
+				self.appRouter.navigate(self.historyPrev, {trigger:false, replace:true});
+			});
 		}
 		
 	});

@@ -43,4 +43,19 @@ jQuery(document).ready(function($) {
 		$('.option-set li a[data-option-value="'+param+'"]').toggleClass('selected');
 	});
 
+	//manage tap events for all video items, waiting for item rendering
+	$(document).on('itemComplete', function (e, tooltip, needTooltip){
+		tooltip.on('click', function (e) {
+			e.preventDefault();			
+		});
+		if(needTooltip){
+			tooltip.hammer().on('tap', function (e){
+				$('a[data-role="tooltip"]').not($(this)).tooltip('hide');
+				$(this).next().hasClass('in') ? $(this).tooltip('hide') : $(this).tooltip('show');
+			});
+		}
+	});
+
+
+
 });
