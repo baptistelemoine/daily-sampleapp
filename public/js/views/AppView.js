@@ -41,8 +41,6 @@ define([
 
 		getChannel:function(hash){
 			
-			var self = this;
-
 			var $mainContainer = $('#slider-container');
 
 			//empty container
@@ -50,44 +48,38 @@ define([
 			if(this.header) this.header.$el.remove();
 
 			//append header list
-			this.headerModel = new ChannelModel({
+			var headerModel = new ChannelModel({
 				channel:hash,
 				page:1,
 				total_pages:100
 			});
 			this.header = new HeaderView({
-				model:self.headerModel
+				model:headerModel
 			});
+			// $mainContainer.before(this.header.render().$el);
 			$('div[data-role="list-filter"]').before(this.header.render().$el);
 			$('#filters').removeClass('active');
 
-			//create 3 view and 3 pages container
-			this.pages = [];
-			for (var i = 0; i < 3; i++) {
-				
-				$('<div class="row-fluid page" data-page="'+(i+1)+'"></div>')
-				.appendTo($mainContainer);
-
-				this.pages.push(new VideoList({
-					collection:new Videos({channel:hash})
-				}));
-			}
-
-			this.initSwipeView();
-
-			this.historyPrev = Backbone.history.fragment;
-
-		},
-
-		initSwipeView:function(){
 			//initialize swipe view : add dom els
 			var slider = new SwipeView('#slider-container', {
 				numberOfPages: 100,
 				hastyPageFlip: true
 			});
 
+			//create 3 view and 3 pages container
+			var pages = [];
+			for (var i = 0; i < 3; i++) {
+
+				$('<div class="row-fluid page" data-page="'+(i+1)+'"></div>')
+				.appendTo($mainContainer);
+
+				pages.push(new VideoList({
+					collection:new Videos({channel:hash})
+				}));
+			}
+
 			//for each page, populate collection with paging
-			_.each(this.pages, function (value, i){
+			_.each(pages, function (value, i){
 				var $container = $('div.page').eq(i);
 				var $swipePage = $('#swipeview-masterpage-'+i);
 				value.collection.goTo(i+1 , {
@@ -100,26 +92,26 @@ define([
 				});
 			});
 
-			var self = this;
-
 			//listen to slider flip, & load upcoming pages
-			slider.onFlip(function (){
+			slider.onFlip(function (){				
 				//update current page
-				self.headerModel.set('page', slider.pageIndex+1);
+				headerModel.set('page', slider.pageIndex+1);				
 				//request api
 				for (i=0; i<3; i++) {
 					upcoming = slider.masterPages[i].dataset.upcomingPageIndex;
 					if (upcoming != slider.masterPages[i].dataset.pageIndex) {
 						var index = parseInt(upcoming, 10)+2 <= 100 ? parseInt(upcoming, 10)+2 : 1;
-						self.pages[i].collection.goTo(index);
+						pages[i].collection.goTo(index);
 
 					}
 				}
 			});
 
-
+			this.historyPrev = Backbone.history.fragment;
+			
 		},
 
+		
 		getVideo:function(hash){
 			
 			//request api and push infos about single video
