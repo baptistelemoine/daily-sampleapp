@@ -25,8 +25,7 @@ define([
 				dataType:'json',
 				success:function (resp){
 					self.model.set({'channel_name':resp.name}, {silent:true});
-					self.$el.html(self.template(self.model.toJSON()));
-					$(window).trigger('ddReady', [self.model.get('channel')]);
+					self.$el.html(self.template(self.model.toJSON()));					
 				}
 			});
 

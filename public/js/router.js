@@ -9,9 +9,10 @@ define([
 
         routes:{
                 
-            ''              : 'default',
-            'video/:id'     : 'getVideo',
-            'channel/:name' : 'getChannel'
+            ''                 : 'default',
+            'video/:id'        : 'getVideo',
+            'channel/:name'    : 'getChannel',
+            'search/:keywords' : 'getSearch'
         }
   	});
 });
