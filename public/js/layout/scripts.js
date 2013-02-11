@@ -30,7 +30,7 @@ jQuery(document).ready(function($) {
 					//obj.placeholder.text('' + obj.val);
 					obj.opts.removeClass('selected');
 					opt.addClass('selected');
-					obj.dd.removeClass('active');
+					// obj.dd.removeClass('active');
 			});
 		}
 	};

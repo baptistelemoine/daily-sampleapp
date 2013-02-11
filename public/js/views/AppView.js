@@ -35,7 +35,7 @@ define([
 		getSearch:function(keyword){
 			// var url = 'https.dailymotion.'
 			for (var i = 0; i < 3; i++) {
-				// console.log(this.pages[i].url());
+				console.log(this.pages[i]);
 			}
 		},
 
@@ -59,6 +59,7 @@ define([
 				model:self.headerModel
 			});
 			$('div[data-role="list-filter"]').before(this.header.render().$el);
+			$('#filters').removeClass('active');
 
 			//create 3 view and 3 pages container
 			this.pages = [];

@@ -149,12 +149,12 @@ div[data-role="list-filter"] { margin-left: 10px; }
 	text-decoration: none;
 }
 
-#filters a:hover, li.selected a {
+#filters a:hover, a:active, li.selected a {
 	color: #fff!important;
 	margin-left: 15px;
 }
 
-li:hover, li.selected{
+li:hover, li:active, li.selected{
 	background-color: #aaa;
 	width: 172px;
 	margin-left: -15px;
