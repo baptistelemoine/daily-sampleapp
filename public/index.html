@@ -19,10 +19,10 @@
               <h2>Search<span> / from channels</span></h2>             
             </div>
             <div class="row-fluid">
-              <input type="text" placeHolder="not yet implemented..." class="input large">
+              <input type="text" placeHolder="enter keyword" class="input large" id="input_videos">
             </div>
             <div class="row-fluid btn-container">
-              <a href="#" class="button color">search</a>
+              <a href="#" class="button color" id="search_videos">search</a>
             </div>
           </div> 
           <div class="menu-content">
@@ -30,20 +30,23 @@
               <h2>Search<span> / from users</span></h2>             
             </div>
             <div class="row-fluid">
-              <input type="text" placeHolder="not yet implemented..." class="input large">
+              <input type="text" placeHolder="ex:750grammes" class="input large"  id="input_user">
             </div>
             <div class="row-fluid btn-container">
-              <a href="#" class="button color">search</a>
+              <a href="#" class="button color" id="search_user">search</a>
             </div>
           </div>
           <div class="menu-content">
             <div class="row-fluid">
-              <h2>Info<span> / about</span></h2>             
+              <h2>Info<span> / about</span></h2> 
+              <p>TODO : add filter from api request (ex:list videos from popularity)</p>
             </div>
           </div>
           <div class="menu-content">
             <div class="row-fluid">
-              <h2>Twitter<span> / latest tweets</span></h2>             
+              <h2>Twitter<span> / latest tweets</span></h2> 
+              <ul id="twitter-feed">
+              </ul>           
             </div>
           </div>
           <div class="row-fluid icon"><i class="icon-search"></i></div>

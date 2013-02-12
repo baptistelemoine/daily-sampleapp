@@ -18,7 +18,7 @@ define([
         paginator_core: {
             type: 'GET',
             dataType: 'json',
-            url:function() { return 'https://api.dailymotion.com/channel/'+this.param.channel+'/videos';}
+            url:function(){return _.first(this.param).get('url');}
         },
         
         paginator_ui: {

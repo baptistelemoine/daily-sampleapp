@@ -4,27 +4,38 @@ define([
   'backbone',
   'collections/videos',
   'views/list/VideoList',
-  'swipeview',
   'router',
   'views/ModalView',
   'models/video',
   'views/HeaderView',
-  'models/channel'
+  'models/channel',
+  'views/SwipeView',
+  'collections/tweets',
+  'views/list/TwitterWidget'
 
-], function ($, _, Backbone, Videos, VideoList, SwipeView, AppRouter, ModalView, VideoModel, HeaderView, ChannelModel){
+], function ($, _, Backbone, Videos, VideoList, AppRouter, ModalView, VideoModel, HeaderView, ChannelModel, SwipeView, Tweets, TwitterWidget){
 	
 	return Backbone.View.extend({
 
 		initialize:function(){
 			
-			_.bindAll(this, 'defaultPath', 'getChannel', 'getVideo', 'getSearch');
+			_.bindAll(this, 'defaultPath', 'getChannel', 'getVideo', 'getSearch', 'getUser');
 
 			this.appRouter = new AppRouter();
 			this.appRouter.on('route:getVideo', this.getVideo);
 			this.appRouter.on('route:getChannel', this.getChannel);
 			this.appRouter.on('route:getSearch', this.getSearch);
+			this.appRouter.on('route:getUser', this.getUser);
 			this.appRouter.on('route:default', this.defaultPath);
 			Backbone.history.start({pushState:false});
+
+			//populate twitter feed
+			var t = new Tweets();
+			t.fetch({data:{screen_name:'dailymotion', count:5, include_entities:1}});
+			var widget = new TwitterWidget({
+				collection:t
+			});
+			
 
 		},
 
@@ -32,85 +43,89 @@ define([
 			this.appRouter.navigate('channel/videogames', {trigger:true});
 		},
 
+		getUser:function(id){
+			
+			this.headerModel = new ChannelModel({
+				channel:'',
+				page:1,
+				total_pages:0,
+				isChannel:false
+			});
+
+			var self = this;
+			$.ajax({
+                url:'https://api.dailymotion.com/user/'+id+'?fields=videos_total,screenname',
+                    dataType:'json',
+                    success:function (resp){
+						//append header list
+						self.headerModel.set({
+							channel:'User : '+resp.screenname,
+							page:1,
+							total_pages:Math.round(resp.videos_total/8) >100 ? 100 : Math.round(resp.videos_total/8),
+							isChannel:false
+						});
+                    }
+            });
+            var url = 'https://api.dailymotion.com/user/'+id+'/videos';
+            this.initSwipe(url);
+			
+		},
+
 		getSearch:function(keyword){
-			// var url = 'https.dailymotion.'
-			for (var i = 0; i < 3; i++) {
-				console.log(this.pages[i]);
-			}
+			//append header list
+			this.headerModel = new ChannelModel({
+				channel:'Search : '+keyword,
+				page:1,
+				total_pages:100,
+				isChannel:false
+			});
+
+			var url = 'https://api.dailymotion.com/videos?search='+keyword;
+			this.initSwipe(url);
 		},
 
 		getChannel:function(hash){
-			
-			var $mainContainer = $('#slider-container');
-
-			//empty container
-			$mainContainer.empty();
-			if(this.header) this.header.$el.remove();
 
 			//append header list
-			var headerModel = new ChannelModel({
+			this.headerModel = new ChannelModel({
 				channel:hash,
 				page:1,
-				total_pages:100
-			});
-			this.header = new HeaderView({
-				model:headerModel
-			});
-			// $mainContainer.before(this.header.render().$el);
-			$('div[data-role="list-filter"]').before(this.header.render().$el);
-			$('#filters').removeClass('active');
-
-			//initialize swipe view : add dom els
-			var slider = new SwipeView('#slider-container', {
-				numberOfPages: 100,
-				hastyPageFlip: true
+				total_pages:100,
+				isChannel:true
 			});
 
-			//create 3 view and 3 pages container
-			var pages = [];
-			for (var i = 0; i < 3; i++) {
-
-				$('<div class="row-fluid page" data-page="'+(i+1)+'"></div>')
-				.appendTo($mainContainer);
-
-				pages.push(new VideoList({
-					collection:new Videos({channel:hash})
-				}));
-			}
-
-			//for each page, populate collection with paging
-			_.each(pages, function (value, i){
-				var $container = $('div.page').eq(i);
-				var $swipePage = $('#swipeview-masterpage-'+i);
-				value.collection.goTo(i+1 , {
-					success:function(data){
-						//update header total pages, limit is 100...
-						//so no need to update it...
-						//headerModel.set('total_pages', data.totalPages);
-						$container.append(value.el).appendTo($swipePage);
-					}
-				});
-			});
-
-			//listen to slider flip, & load upcoming pages
-			slider.onFlip(function (){				
-				//update current page
-				headerModel.set('page', slider.pageIndex+1);				
-				//request api
-				for (i=0; i<3; i++) {
-					upcoming = slider.masterPages[i].dataset.upcomingPageIndex;
-					if (upcoming != slider.masterPages[i].dataset.pageIndex) {
-						var index = parseInt(upcoming, 10)+2 <= 100 ? parseInt(upcoming, 10)+2 : 1;
-						pages[i].collection.goTo(index);
-
-					}
-				}
-			});
-
-			this.historyPrev = Backbone.history.fragment;
+			//construct url and launch swipe view
+			var url = 'https://api.dailymotion.com/channel/'+hash+'/videos';
+			this.initSwipe(url);
 			
 		},
 
+		initSwipe:function (url){
+			
+			var self = this;
+			//garbage collector
+			if(this.swipeView) {
+				this.swipeView.destroy();
+			}
+
+			if(this.header) this.header.$el.remove();
+			this.header = new HeaderView({
+				model:self.headerModel
+			});
+
+			$('div[data-role="list-filter"]').before(this.header.render().$el);
+			$('#filters').removeClass('active');
+
+			this.swipeView = new SwipeView({
+				numPages:100,
+				collection:new Videos({url:url})
+			});
+			this.swipeView.$el.on('pageFlip', function (e){
+				self.headerModel.set('page', self.swipeView.currentPage);
+			});
+
+			this.historyPrev = Backbone.history.fragment;
+		},
 		
 		getVideo:function(hash){
 			

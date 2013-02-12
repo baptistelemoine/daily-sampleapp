@@ -63,14 +63,14 @@ jQuery(document).ready(function($) {
 	});
 
 	//menu tab bar
-	$('#menu-bar i').hammer().on('tap', function (e){
-		
+	$('#menu-bar i').hammer().on('tap', function (e, param){
+
 		var index = $('#menu-bar i').index($(this));
 		Tab.init(index);
 		$('div.menu-content').hide();
 		$('div.menu-content').eq(index).show();
 		
-	});	
+	});
 	
 	var Tab = {
 		
@@ -108,6 +108,28 @@ jQuery(document).ready(function($) {
 			});
 			if(this.isOpen) self.$icons.eq(self.index).removeClass().addClass('icon-cancel active-icon');
 		}
-	}
+	};
+
+	$('#search_videos').on('click', function (e) {e.preventDefault();});
+	//try click if don't close
+	$('#search_videos').hammer().on('tap', function (e){
+		var keyword = $('#input_videos').val();
+		if(keyword !== '') {
+			Tab.openClose();
+			$('#input_videos').val('');
+			document.location.href = "#search/"+keyword;
+		}
+	});
+
+	$('#search_user').on('click', function (e) {e.preventDefault();});
+	//try click if don't close
+	$('#search_user').hammer().on('tap', function (e){
+		var user = $('#input_user').val();
+		if(user !== '') {
+			Tab.openClose();
+			$('#input_user').val('');
+			document.location.href = "#user/"+user;
+		}
+	});
 
 });

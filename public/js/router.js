@@ -12,7 +12,8 @@ define([
             ''                 : 'default',
             'video/:id'        : 'getVideo',
             'channel/:name'    : 'getChannel',
-            'search/:keywords' : 'getSearch'
+            'search/:keywords' : 'getSearch',
+            'user/:id'         : 'getUser'
         }
   	});
 });
