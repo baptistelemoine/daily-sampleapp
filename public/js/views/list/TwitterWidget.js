@@ -23,14 +23,10 @@ define([
 			_.each(this.collection.models, function (value, index){
 				_.each(value.get('entities').urls, function (val, i){
 					var nt = value.get('text').replace(val.url, '<a href='+val.url+'>'+val.url+'</a>');
-					value.set('html_text',nt);
+					value.set({'html_text':nt}, {silent:true});
 				});
 				self.$el.append(self.template(value.toJSON())).appendTo($('#twitter-feed'));
 			});
-
-			/*_.each(this.collection.models, function (value, index){
-				
-			});		*/
 
         }
 

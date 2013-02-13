@@ -18,7 +18,8 @@ define([
         paginator_core: {
             type: 'GET',
             dataType: 'json',
-            url:function(){return _.first(this.param).get('url');}
+            cache:true,
+            url:function(){return this.param.url || _.first(this.param).get('url');}
         },
         
         paginator_ui: {

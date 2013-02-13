@@ -26,7 +26,7 @@ define([
 		render:function(){
 
 			//empty all dom els
-			this.$mainContainer.empty();
+			//this.$mainContainer.empty().append('<div class="loading"></div>');
 
 			var self = this;
 			//initialize swipe view : add dom els
@@ -38,7 +38,6 @@ define([
 			self.pages =[];
 			//create 3 view and 3 pages container
 			for (var i = 0; i < 3; i++) {
-
 				$('<div class="row-fluid page" data-page="'+(i+1)+'"></div>')
 				.appendTo(self.$mainContainer);
 				self.pages.push(new VideoList({
@@ -50,8 +49,9 @@ define([
 			_.each(self.pages, function (value, i){
 				var $container = $('div.page').eq(i);
 				var $swipePage = $('#swipeview-masterpage-'+i);
-				value.collection.goTo(i+1 , {
+				value.collection.goTo(i === 0 ? self.options.numPages : i , {
 					success:function(data){
+						$('div.loading').remove();
 						//headerModel.set('total_pages', data.totalPages);
 						$container.append(value.$el).appendTo($swipePage);
 					}
@@ -68,7 +68,7 @@ define([
 				for (i=0; i<3; i++) {
 					upcoming = self.slider.masterPages[i].dataset.upcomingPageIndex;
 					if (upcoming != self.slider.masterPages[i].dataset.pageIndex) {
-						var index = parseInt(upcoming, 10)+2 <= 100 ? parseInt(upcoming, 10)+2 : 1;
+						var index = parseInt(upcoming, 10)+1 <= 100 ? parseInt(upcoming, 10)+1 : 1;
 						self.pages[i].collection.goTo(index);
 					}
 				}
@@ -76,8 +76,11 @@ define([
 		},
 
 		destroy:function(){
-			this.slider.destroy();
-			this.slider = null;
+			if(this.slider) {
+				this.slider.destroy();
+				this.slider = null;
+			}
+			
 		}
 
     });

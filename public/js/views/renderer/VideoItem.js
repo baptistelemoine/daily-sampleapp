@@ -28,16 +28,16 @@ define([
                 success:function (resp){
                     self.model.set({'owner_name':self.cut(resp.screenname, 25)}, {silent:true});
                     self.$el.html(self.template(self.model.toJSON()));
-                    var tooltip = false;
+                    var tooltip = true;
                     if(self.model.get('short_title') !== self.model.get('title')) tooltip = true;
                     $(document).trigger('itemComplete', [
-                        $('a[data-role="tooltip"]', self.$el), 
+                        $('a[data-role="tooltip"]', self.$el),
                         tooltip
                         ]);
                 }
             });
 
-            this.$el.html(this.template(this.model.toJSON()));            
+            this.$el.html(this.template(this.model.toJSON()));
             return this;
         },
 
