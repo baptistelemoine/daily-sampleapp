@@ -8,9 +8,9 @@ module.exports = function(grunt) {
     requirejs: {
       production: {
         options: {
-          baseUrl: "js/",
-          mainConfigFile: "js/main.js",
-          out: "dist/project-min.js",
+          baseUrl: "public/js/",
+          mainConfigFile: "public/js/main.js",
+          out: "public/dist/dailystream-min.js",
           name:'main'
         }
       }
