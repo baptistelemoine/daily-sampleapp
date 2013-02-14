@@ -53,7 +53,7 @@ define([
 		},
 
 		defaultPath:function(){
-			this.appRouter.navigate('channel/videogames', {trigger:true});
+			this.appRouter.navigate('channel/news', {trigger:true});
 		},
 
 		getUser:function(id){
