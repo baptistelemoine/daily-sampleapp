@@ -62,6 +62,8 @@ define([
 				channel:'',	page:0,	total_pages:'counting...', isChannel:false
 			});
 			
+			var url = 'https://api.dailymotion.com/user/'+id+'/videos';
+
 			var self = this;
 			$.ajax({
                 url:'https://api.dailymotion.com/user/'+id+'?fields=videos_total,screenname',
@@ -71,14 +73,13 @@ define([
 						self.headerModel.set({
 							channel:'User : '+resp.screenname,
 							page:1,
-							total_pages:Math.round(resp.videos_total/8) >100 ? 100 : Math.round(resp.videos_total/8),
+							total_pages:Math.floor(resp.videos_total/8) >100 ? 100 : Math.floor(resp.videos_total/8),
 							isChannel:false
 						});
+
+						self.initSwipe(url, true);
                     }
             });
-			
-            var url = 'https://api.dailymotion.com/user/'+id+'/videos';
-            this.initSwipe(url);
 			
 		},
 
@@ -92,7 +93,7 @@ define([
 			});
 
 			var url = 'https://api.dailymotion.com/videos?search='+keyword;
-			this.initSwipe(url);
+			this.initSwipe(url, false);
 		},
 
 		getChannel:function(hash){
@@ -104,11 +105,11 @@ define([
 
 			//construct url and launch swipe view
 			var url = 'https://api.dailymotion.com/channel/'+hash+'/videos';
-			this.initSwipe(url);
+			this.initSwipe(url, false);
 			
 		},
 
-		initSwipe:function (url){
+		initSwipe:function (url, isUser){
 
 			var self = this;
 			//garbage collector
@@ -127,11 +128,10 @@ define([
 					//update paging header
 					var totalPages = data.info().totalPages <= 100 ? data.info().totalPages : 100;
 					var currentPage = data.info().totalRecords > 0 ? 1 : 0;
-					//update total pages in header info
-					self.headerModel.set({ total_pages:totalPages});
-					//if user search, no model current page update
-					if(!isNaN(data.info().totalPages))
-						self.headerModel.set({total_pages:totalPages,page:currentPage});
+					
+					//if user, don't update total pages & header
+					if(!isUser) self.headerModel.set({total_pages:totalPages,page:currentPage});
+					else totalPages = self.headerModel.get('total_pages');
 					
 					//launch swipe view
 					self.swipeView = new SwipeView({

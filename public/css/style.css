@@ -323,7 +323,7 @@ input[type="submit"]:hover { background:#aaa; }
 	color: rgb(151, 151, 151);
 }
 
-.active-icon{background: #000;}
+.active-icon{background: #000; border-radius: 20px;}
 
 .menu-content{
 	position:absolute;
