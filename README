@@ -1,9 +1,0 @@
-Daily motion tablet app
-
-An app written with backbone, retrieve videos channels and more
-
-heroku : 
-git remote -v
-git remote rm heroku
-heroku git:remote -a app-name
-git heroku push master
