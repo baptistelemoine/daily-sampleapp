@@ -1,6 +1,6 @@
 {
-    "name": "mobile-fnsea",
-    "description": "My Project",
+    "name": "daily-stream",
+    "description": "Daily motion tablet app",
     "version": "0.0.1",
     "private": true,
     "dependencies": {
