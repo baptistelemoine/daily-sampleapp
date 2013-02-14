@@ -16,4 +16,4 @@ The app works with the daily motion graph api, and provides videos from channels
 
 ## Hosting
 
-The project is hosted on Heroku for free.
+The project is hosted on Heroku for free : [http://daily-stream.herokuapp.com](http://daily-stream.herokuapp.com)
