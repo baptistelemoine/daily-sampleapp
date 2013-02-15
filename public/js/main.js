@@ -12,7 +12,7 @@ require.config({
     swipeview:'libs/cubiq/swipeview',
     layout:'layout/scripts',
     hammer:'libs/hammer/hammer',
-    jqHammer:'libs/hammer/jquery.hammer'
+    jqHammerSpecial:'libs/hammer/jquery.specialevent.hammer'
 
   },
   
@@ -24,11 +24,11 @@ require.config({
     underscore: {
         exports: '_'
     },
-    layout:['jquery', 'jqHammer'],
+    layout:['jquery', 'jqHammerSpecial'],
     swipeview:{
         exports:'SwipeView'
     },
-    jqHammer:['jquery', 'hammer'],
+    jqHammerSpecial:['jquery', 'hammer'],
     paginator : ['underscore', 'backbone'],
     bootstrap : ['jquery']
   }

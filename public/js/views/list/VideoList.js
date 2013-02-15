@@ -3,9 +3,10 @@ define([
     'underscore',
     'backbone',
     'views/renderer/VideoItem',
-    'text!templates/VideoListTemplate.html'
+    'text!templates/VideoListTemplate.html',
+    'models/user'
 
-    ], function ($, _, Backbone, VideoItem, VideoListTmpl) {
+    ], function ($, _, Backbone, VideoItem, VideoListTmpl, UserModel) {
 
     return Backbone.View.extend({
         
@@ -32,8 +33,22 @@ define([
         },
 
         addAll:function(){
+            
+            var self = this;
+            // empty dom video list
             this.$el.empty();
-            this.collection.each(this.addOne);
+            
+            //for each item in collection, retrieve user info before rendering
+            _.each(this.collection.models, function (value) {
+                var user = new UserModel();
+                user.url = 'https://api.dailymotion.com/user/'+value.get('owner')+'?fields=videos_total,screenname,avatar_medium_url,id';
+                user.fetch({
+                    success:function(data){
+                        value.set({'user':data}, {silent:true});
+                        self.addOne(value);
+                    }
+                });
+            });
         }
 
     });

@@ -14,16 +14,12 @@ jQuery(document).ready(function($) {
 		initEvents : function() {
 			var obj = this;
 
-			obj.dd.hammer({
-					prevent_default: false
-				}).on('tap', function(event){
+			obj.dd.on('tap', function(event){
 					$(this).toggleClass('active');
 					event.stopPropagation();
 			});
 
-			obj.opts.hammer({
-					prevent_default: false
-				}).on('tap', function(event){
+			obj.opts.on('tap', function(event){
 					var opt = $(this);
 					obj.val = opt.text();
 					obj.index = opt.index();
@@ -49,21 +45,8 @@ jQuery(document).ready(function($) {
 		$(this).empty();
 	});
 	
-	//manage tap events for all video items, waiting for item rendering
-	$(document).on('itemComplete', function (e, tooltip, needTooltip){
-		tooltip.on('click', function (e) {
-			e.preventDefault();
-		});
-		if(needTooltip){
-			tooltip.hammer().on('tap', function (e){
-				$('a[data-role="tooltip"]').not($(this)).tooltip('hide');
-				$(this).next().hasClass('in') ? $(this).tooltip('hide') : $(this).tooltip('show');
-			});
-		}
-	});
-
 	//menu tab bar
-	$('#menu-bar i').hammer().on('tap', function (e, param){
+	$('#menu-bar i').on('tap', function (e, param){
 
 		var index = $('#menu-bar i').index($(this));
 		Tab.init(index);
@@ -112,7 +95,7 @@ jQuery(document).ready(function($) {
 
 	$('#search_videos').on('click', function (e) {e.preventDefault();});
 	//try click if don't close
-	$('#search_videos').hammer().on('tap', function (e){
+	$('#search_videos').on('tap', function (e){
 		var keyword = $('#input_videos').val();
 		if(keyword !== '') {
 			Tab.openClose();
@@ -123,7 +106,7 @@ jQuery(document).ready(function($) {
 
 	$('#search_user').on('click', function (e) {e.preventDefault();});
 	//try click if don't close
-	$('#search_user').hammer().on('tap', function (e){
+	$('#search_user').on('tap', function (e){
 		var user = $('#input_user').val();
 		if(user !== '') {
 			Tab.openClose();

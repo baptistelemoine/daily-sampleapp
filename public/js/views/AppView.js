@@ -11,9 +11,10 @@ define([
   'models/channel',
   'views/SwipeView',
   'collections/tweets',
-  'views/list/TwitterWidget'
+  'views/list/TwitterWidget',
+  'models/user'
 
-], function ($, _, Backbone, Videos, VideoList, AppRouter, ModalView, VideoModel, HeaderView, ChannelModel, SwipeView, Tweets, TwitterWidget){
+], function ($, _, Backbone, Videos, VideoList, AppRouter, ModalView, VideoModel, HeaderView, ChannelModel, SwipeView, Tweets, TwitterWidget, UserModel){
 	
 	return Backbone.View.extend({
 
@@ -65,22 +66,20 @@ define([
 			var url = 'https://api.dailymotion.com/user/'+id+'/videos';
 
 			var self = this;
-			$.ajax({
-                url:'https://api.dailymotion.com/user/'+id+'?fields=videos_total,screenname',
-                    dataType:'json',
-                    success:function (resp){
-						//append header list
-						self.headerModel.set({
-							channel:'User : '+resp.screenname,
-							page:1,
-							total_pages:Math.floor(resp.videos_total/8) >100 ? 100 : Math.floor(resp.videos_total/8),
-							isChannel:false
-						});
 
-						self.initSwipe(url, true);
-                    }
-            });
-			
+			var user = new UserModel();
+			user.url = 'https://api.dailymotion.com/user/'+id+'?fields=videos_total,screenname,avatar_medium_url';
+			user.fetch({
+				success:function(data){
+					self.headerModel.set({
+						channel:'User : '+data.get('screenname'),
+						page:1,
+						total_pages:Math.floor(data.get('videos_total')/8) >100 ? 100 : Math.floor(data.get('videos_total')/8),
+						isChannel:false
+					});
+					self.initSwipe(url, true);
+				}
+			});
 		},
 
 		getSearch:function(keyword){
@@ -121,7 +120,7 @@ define([
 			$('#slider-container').empty().append('<div class="loading"></div>');
 
 			//fetch current url, get response total videos/pages
-			//before launching the swie view
+			//before launching the swipe view
 			var coll = new Videos({url:url});
 			coll.fetch({
 				success:function(data){
@@ -129,8 +128,10 @@ define([
 					var totalPages = data.info().totalPages <= 100 ? data.info().totalPages : 100;
 					var currentPage = data.info().totalRecords > 0 ? 1 : 0;
 					
-					//if user, don't update total pages & header
-					if(!isUser) self.headerModel.set({total_pages:totalPages,page:currentPage});
+					//update header infos if not a user request
+					if(!isUser)
+						self.headerModel.set({total_pages:totalPages,page:currentPage});
+					//if user update the total pages
 					else totalPages = self.headerModel.get('total_pages');
 					
 					//launch swipe view
@@ -141,11 +142,13 @@ define([
 					self.swipeView.$el.on('pageFlip', function (e){
 						self.headerModel.set('page', self.swipeView.currentPage);
 					});
+					
 				}
 			});
 
+			//store current list when close modal video
 			this.historyPrev = Backbone.history.fragment;
-
+			//set ddl to its origin state
 			$('#filters').removeClass('active');
 		},
 		
@@ -166,9 +169,12 @@ define([
 
 			var self = this;
 			//launch bootstrap modal
-			$('#video-modal').modal();
+			$('#video-modal').modal('show');
 			$('#video-modal').on('hide', function (e){
 				self.appRouter.navigate(self.historyPrev, {trigger:false, replace:true});
+			});
+			$('div.modal-backdrop').on('tap', function (e){
+				$('#video-modal').modal('hide');
 			});
 		}
 		
