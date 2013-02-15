@@ -459,7 +459,7 @@
 			"file": "public/index.html",
 			"settings":
 			{
-				"buffer_size": 4054,
+				"buffer_size": 4050,
 				"line_ending": "Windows"
 			}
 		}
@@ -467,16 +467,20 @@
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 242.0,
+		"height": 392.0,
 		"selected_items":
 		[
 			[
-				"comm",
+				"co",
 				"Git: Commit"
 			],
 			[
 				"add",
 				"Git: Add..."
+			],
+			[
+				"comm",
+				"Git: Commit"
 			],
 			[
 				"commit",
@@ -887,8 +891,8 @@
 						"selection":
 						[
 							[
-								979,
-								979
+								948,
+								948
 							]
 						],
 						"settings":
@@ -1001,15 +1005,15 @@
 					"file": "public/index.html",
 					"settings":
 					{
-						"buffer_size": 4054,
+						"buffer_size": 4050,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2664,
-								2664
+								0,
+								0
 							]
 						],
 						"settings":

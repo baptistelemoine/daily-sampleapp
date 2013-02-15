@@ -23,7 +23,7 @@ define([
             if(self.model.get('isChannel')){
 
                 $.ajax({
-                url:'https://api.dailymotion.com/channel/'+this.model.get('channel')+'?fields=name',
+                url:'https://api.dailymotion.com/channel/'+this.model.get('channel')+'?fields=name&localization=en',
                     dataType:'json',
                     success:function (resp){
                         self.model.set({'channel_name':resp.name}, {silent:true});
