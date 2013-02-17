@@ -11,7 +11,7 @@ require.config({
     bootstrap:'libs/bootstrap/bootstrap',
     swipeview:'libs/cubiq/swipeview',
     layout:'layout/scripts',
-    hammer:'libs/hammer/hammer',
+    hammer:'libs/hammer/hammer2',
     jqHammerSpecial:'libs/hammer/jquery.specialevent.hammer'
 
   },

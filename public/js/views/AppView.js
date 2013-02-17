@@ -74,7 +74,7 @@ define([
 					self.headerModel.set({
 						channel:'User : '+data.get('screenname'),
 						page:1,
-						total_pages:Math.floor(data.get('videos_total')/8) >100 ? 100 : Math.floor(data.get('videos_total')/8),
+						total_pages:Math.ceil(data.get('videos_total')/8) >100 ? 100 : Math.ceil(data.get('videos_total')/8),
 						isChannel:false
 					});
 					self.initSwipe(url, true);
@@ -142,6 +142,7 @@ define([
 					self.swipeView.$el.on('pageFlip', function (e){
 						self.headerModel.set('page', self.swipeView.currentPage);
 					});
+					// self.swipeView.delegateEvents();
 					
 				}
 			});
@@ -169,7 +170,7 @@ define([
 
 			var self = this;
 			//launch bootstrap modal
-			$('#video-modal').modal('show');
+			$('#video-modal').modal();
 			$('#video-modal').on('hide', function (e){
 				self.appRouter.navigate(self.historyPrev, {trigger:false, replace:true});
 			});

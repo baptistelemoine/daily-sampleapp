@@ -326,7 +326,7 @@ var SwipeView = (function (window, document) {
 
 			// We take a 10px buffer to figure out the direction of the swipe
 			if (this.stepsX < 10 && this.stepsY < 10) {
-//				e.preventDefault();
+				// e.preventDefault();
 				return;
 			}
 

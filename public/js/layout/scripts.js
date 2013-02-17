@@ -20,6 +20,7 @@ jQuery(document).ready(function($) {
 			});
 
 			obj.opts.on('tap', function(event){
+					event.stopPropagation();
 					var opt = $(this);
 					obj.val = opt.text();
 					obj.index = opt.index();
@@ -44,7 +45,18 @@ jQuery(document).ready(function($) {
 	$('#video-modal').on('hide', function (e){
 		$(this).empty();
 	});
-	
+
+	//hide all when tap on blank area
+	$('#main-container').on('tap', function (e){
+		$('div[data-role="tooltip"]').tooltip('hide');
+		$('div[data-role="popover"]').popover('hide');
+		
+		$('#menu-bar i').each(function (index, value){
+			if($(value).hasClass('active-icon'))
+				$(this).trigger('tap');
+		});
+	});
+
 	//menu tab bar
 	$('#menu-bar i').on('tap', function (e, param){
 

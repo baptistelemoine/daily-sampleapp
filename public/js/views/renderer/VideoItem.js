@@ -18,7 +18,7 @@ define([
 
         events:{
             'tap div[data-role="tooltip"]'         :'onTitleTap',
-            'tap img'                              :'navigate',
+            // 'tap img'                              :'navigate',
             'tap div[data-role="popover"]'         :'onUserTap',
             'tap div[data-role="popover-btn-user"]':'navigate'
         },
@@ -34,6 +34,8 @@ define([
             //populate popover
             var tmpl = _.template(PopoverTemplate);
             $('div[data-role="popover"]', this.$el).attr('data-content', tmpl(this.model.get('user').toJSON()));
+            
+            if ($('div.span3', this.$el).hasClass('last')) $('div[data-role="popover"]', this.$el).attr('data-placement', 'left');
 
             return this;
         },
@@ -42,18 +44,20 @@ define([
            var $current = $(e.currentTarget);
            $('div[data-role="tooltip"]').not($current).tooltip('hide');
            $current.next().hasClass('in') ? $current.tooltip('hide') : $current.tooltip('show');
+           e.stopPropagation();
         },
 
         onUserTap:function(e){
             var $current = $(e.currentTarget);
-            console.log($(e.currentTarget).parents('.row-fluid .page').find('.item-container'));
             $('div[data-role="popover"]').not($current).popover('hide');
             $current.next().hasClass('in') ? $current.popover('hide') : $current.popover('show');
+            e.stopPropagation();
         },
 
         navigate:function(e){
             var router = new Backbone.Router();
-            router.navigate($(e.currentTarget).data('rel'), {trigger:true});
+            router.navigate($(e.currentTarget).data('rel'), {trigger:true, replace:false});
+
         },
 
         cut:function(str, lng){

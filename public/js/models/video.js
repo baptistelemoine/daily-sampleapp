@@ -5,7 +5,8 @@ define([
     return Backbone.Model.extend({
     	defaults:{
     		'owner_name':'',
-    		'user':null
+    		'user':null,
+    		'isLast':false
     	}
     });
 

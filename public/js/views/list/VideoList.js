@@ -26,6 +26,7 @@ define([
             var video = new VideoItem({
                   model:item
             });
+            if((this.collection.length) % 4 === 1) item.set({'isLast':true}, {silent:true});
             //create row if > 3
             this.$el.append(this.template());
             //add item on the last row

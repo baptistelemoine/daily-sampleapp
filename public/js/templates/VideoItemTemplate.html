@@ -1,11 +1,13 @@
-<div class="span3" data-view="video-item">
+<div class="span3 <% if(isLast) print("last") %>" data-view="video-item">
 	<div class="item-container">
-		<div class="img-container">			
-			<img src="<%= thumbnail_large_url%>" data-rel="#video/<%= id %>"/>
+		<div class="img-container">
+			<a href="#video/<%= id %>">
+				<img src="<%= thumbnail_large_url%>" data-rel="#video/<%= id %>"/>
+			</a>
 		</div>		
 		<div class="info">			
 			<h5>
-				<div data-role="tooltip" data-trigger="manual" data-placement="bottom" title="" data-original-title="<%= title %>"><%= short_title %></div>
+				<div data-role="tooltip" data-trigger="manual" data-placement="bottom" title="" data-original-title="<%= title.replace('"', '') %>"><%= short_title %></div>
 			</h5>
 			<span>
 				<div data-role="popover" data-trigger="manual" data-placement="right" data-html="true" title="<i class='icon-user'></i><%= user.get('screenname') %>" data-content=""><%= user.get('screenname') %></div>

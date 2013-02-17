@@ -20,15 +20,30 @@ define([
           _.bindAll(this, 'render');
           this.options = options;
 
-          this.render();
+          this.render();          
         },
 
 		render:function(){
 
-			//empty all dom els
-			//this.$mainContainer.empty().append('<div class="loading"></div>');
-
 			var self = this;
+
+			//if only one page create single list view and escape
+			if(this.options.numPages === 1){	
+				var list = new VideoList({
+					collection:self.collection
+				});
+				list.collection.pager({
+					success:function(data){
+						$('div.loading').remove();
+						$('<div class="row-fluid page" data-page="0"></div>')
+						.appendTo(self.$mainContainer)
+						.append(list.$el);						
+					}
+				});
+
+				return;
+			}
+
 			//initialize swipe view : add dom els
 			this.slider = new SwipeView(self.$mainContainer.selector, {
 				numberOfPages: self.options.numPages,
