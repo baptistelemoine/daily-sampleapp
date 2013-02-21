@@ -1,6 +1,7 @@
-# Daily motion app
+# Daily motion videos explorer
 
-The app works with the daily motion graph api, and provides videos from channels, users, and allow you to make a global search. Especially written and tested on an ipad, this app is also comfortable on desktop (sometimes weird on click, because of touch events implementation)
+The app allows you to browse videos from channels and users, a global search is also available.
+Specially designed for a tablet, and currently only tested on an ipad, the appplication is lso comfortable on desktop.
 
 ## The main developement stack :
 
